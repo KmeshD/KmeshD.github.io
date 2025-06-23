@@ -1,54 +1,123 @@
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
   line-height: 1.6;
-}
-header {
-  background: #1e1e1e;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-header h1 {
-  font-size: 2.5rem;
-}
-header p {
-  font-size: 1.2rem;
-  opacity: 0.8;
+  padding: 0 1rem;
 }
 
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+/* Layout */
+header, .about, .projects, footer {
+  max-width: 1000px;
+  margin: 2rem auto;
 }
-section h2 {
+
+header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.about h2, .projects h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #444;
+  color: #fff;
 }
+
+.about p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Projects */
 .project {
-  background: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
-a {
-  color: #1e1e1e;
+
+.project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project div {
+  padding: 1rem;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.project .status {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.project p {
+  margin-bottom: 0.4rem;
+  color: #aaa;
+}
+
+.project a {
+  color: #80cbc4;
   text-decoration: none;
 }
-a:hover {
+
+.project a:hover {
   text-decoration: underline;
 }
+
+/* Footer */
 footer {
-  background: #1e1e1e;
-  color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+  .project {
+    flex-direction: row;
+  }
+
+  .project img {
+    width: 300px;
+    height: 100%;
+  }
+
+  .project div {
+    flex: 1;
+  }
 }
